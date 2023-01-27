@@ -1,0 +1,17 @@
+<div class="buscadores">
+
+
+<div class="input-shear">
+<input type="text" [(ngModel)]= "searchText" placeholder="Search Anime">
+<button (click)="search(searchText, years)">Buscar</button>
+</div>
+
+<div class="age-shear"></div>
+<h5>Range: {{years[0] + ' - ' + years[1]}}</h5>
+<p-slider [(ngModel)]="years" [range]="true" [min]="1903" [max]="2023"></p-slider>
+<div class="buscar-ano">
+<button (click)="search(searchText, years)">Buscar</button>
+</div>
+</div>
+<app-gallery [list]="animes"></app-gallery>
+
